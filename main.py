@@ -1,3 +1,7 @@
+from validate_price import validate_price
+from validate_quantity import validate_quantity
+from validate_customer import validate_customer
+
 def convert_order(dataset):
 
     # Empty clean list
@@ -16,45 +20,62 @@ def convert_order(dataset):
 
         # adding 1 to every itteration of for loop
         total_orders += 1
+        
 
-        if i['order_id'] in seen:
+        order_id = i.get("order_id")
+        if order_id in seen:
             duplicate_orders += 1 
             continue 
-        seen.add(i['order_id'])
+        seen.add(order_id)
             
         
-        
-        if i['customer_id'] is None:
-
-            # adding 1 to every itteration when a customer is missing
-            missing_customers += 1
-            print(f"{i['order_id']} is missing a customer")
+        if not validate_customer(i,"customer_id"):
+            missing_customers += 1 
             continue
+
+        # if i['customer_id'] is None:
+
+        #     # adding 1 to every itteration when a customer is missing
+        #     missing_customers += 1
+        #     print(f"{i['order_id']} is missing a customer")
+        #     continue
         
-        else:
-            print(f"{i['order_id']} has a customer")
+        # else:
+        #     print(f"{i['order_id']} has a customer")
 
         
-
-        try:
+        if not validate_price(i,"price"):
+            invalid_price += 1 
+            continue
+        elif validate_price(i,"price"):
             price = float(i["price"])
-            print(f"Price: {price}")
-            if price < 0:
-                invalid_price += 1 
-                continue
-        except ValueError:
-            invalid_price += 1
-            continue 
 
-        try:
-            quantity = int(i["quantity"])
-            print(f"Quantity: {quantity}")
-            if quantity <= 0:
-                invalid_quantity += 1 
-                continue
-        except ValueError:
+        # try:
+        #     price = float(i["price"])
+        #     print(f"Price: {price}")
+        #     if price < 0:
+        #         invalid_price += 1 
+        #         continue
+        # except ValueError:
+        #     invalid_price += 1
+        #     continue 
+
+        if not validate_quantity(i,"quantity"):
             invalid_quantity += 1 
             continue 
+        elif validate_quantity(i,"quantity"):
+            quantity = int(i["quantity"])
+            
+        
+        # try:
+        #     quantity = int(i["quantity"])
+        #     print(f"Quantity: {quantity}")
+        #     if quantity <= 0:
+        #         invalid_quantity += 1 
+        #         continue
+        # except ValueError:
+        #     invalid_quantity += 1 
+        #     continue 
 
             
             
@@ -62,17 +83,16 @@ def convert_order(dataset):
 
         data_dictionary = {
 
-            "order_id": i["order_id"],
+            "order_id": order_id,
             "customer_id": i["customer_id"],
             "product": i["product"],
             "price": price,
             "quantity": quantity,
-            "order_total": price * quantity
+            "order_total": round(price * quantity,2)
 
         }
+        
         clean_list.append(data_dictionary)
-
-        # adding 1 to every sucessfully processed order
         successful_orders += 1 
     
 
