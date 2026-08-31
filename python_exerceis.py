@@ -10,11 +10,20 @@ def convert_order(dataset):
     invalid_price= 0 
     invalid_quantity = 0 
     duplicate_orders = 0
+
+    seen = set() 
     for i in dataset:
 
         # adding 1 to every itteration of for loop
         total_orders += 1
 
+        if i['order_id'] in seen:
+            duplicate_orders += 1 
+            continue 
+        seen.add(i['order_id'])
+            
+        
+        
         if i['customer_id'] is None:
 
             # adding 1 to every itteration when a customer is missing
@@ -65,6 +74,7 @@ def convert_order(dataset):
 
         # adding 1 to every sucessfully processed order
         successful_orders += 1 
+    
 
     quality_report = {
 
@@ -72,7 +82,8 @@ def convert_order(dataset):
         "successful_orders": successful_orders, 
         "missing_customers": missing_customers, 
         "invalid_price": invalid_price,
-        "invalid_quantity": invalid_quantity 
+        "invalid_quantity": invalid_quantity,
+        "duplicate_orders": duplicate_orders
     }
 
 
