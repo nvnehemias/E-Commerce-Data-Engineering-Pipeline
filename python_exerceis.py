@@ -19,26 +19,30 @@ def convert_order(dataset):
 
             # adding 1 to every itteration when a customer is missing
             missing_customers += 1
-            print(f "{i['order_id']} is missing a customer")
+            print(f"{i['order_id']} is missing a customer")
             continue
         
         else:
-
-            # adding 1 to every order that has a a customer 
-            successful_orders += 1 
             print(f"{i['order_id']} has a customer")
 
-        try:
-            
-            price = float(i["price"])
-            quantity = int(i["quantity"])
-            print(f"Price: {price}")
-            print(f"Quantity: {quantity}")
-            
 
+        try:
+            price = float(i["price"])
+            print(f"Price: {price}")
         except ValueError:
-            print("Something failed")
-            continue
+            invalid_price += 1
+            continue 
+
+        try:
+            quantity = int(i["quantity"])
+            print(f"Quantity: {quantity}")
+        except ValueError:
+            invalid_quantity += 1 
+            continue 
+
+            
+            
+                        
 
         data_dictionary = {
 
@@ -51,5 +55,19 @@ def convert_order(dataset):
 
         }
         clean_list.append(data_dictionary)
-    return clean_list   
+        
+        # adding 1 to every order that has a a customer 
+        successful_orders += 1 
+
+    quality_report = {
+
+        "total_orders": total_orders,
+        "successful_orders": successful_orders, 
+        "missing_customers": missing_customers, 
+        "invalid_price": invalid_price,
+        "invalid_quantity": invalid_quantity 
+    }
+
+
+    return clean_list, quality_report
         
