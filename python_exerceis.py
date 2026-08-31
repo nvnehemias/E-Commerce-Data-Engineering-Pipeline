@@ -9,7 +9,7 @@ def convert_order(dataset):
     missing_customers = 0 
     invalid_price= 0 
     invalid_quantity = 0 
-    
+    duplicate_orders = 0
     for i in dataset:
 
         # adding 1 to every itteration of for loop
@@ -25,10 +25,14 @@ def convert_order(dataset):
         else:
             print(f"{i['order_id']} has a customer")
 
+        
 
         try:
             price = float(i["price"])
             print(f"Price: {price}")
+            if price < 0:
+                invalid_price += 1 
+                continue
         except ValueError:
             invalid_price += 1
             continue 
@@ -36,6 +40,9 @@ def convert_order(dataset):
         try:
             quantity = int(i["quantity"])
             print(f"Quantity: {quantity}")
+            if quantity <= 0:
+                invalid_quantity += 1 
+                continue
         except ValueError:
             invalid_quantity += 1 
             continue 
@@ -55,8 +62,8 @@ def convert_order(dataset):
 
         }
         clean_list.append(data_dictionary)
-        
-        # adding 1 to every order that has a a customer 
+
+        # adding 1 to every sucessfully processed order
         successful_orders += 1 
 
     quality_report = {
