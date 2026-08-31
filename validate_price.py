@@ -1,3 +1,4 @@
+"""
 valid_order = {
     "price": "899.99"
 }
@@ -9,7 +10,7 @@ negative_order = {
 bad_order = {
     "price": "invalid"
 }
-
+"""
 
 def validate_price(value, column_name):
     try:
@@ -22,6 +23,8 @@ def validate_price(value, column_name):
         return False
     return True
 
+"""
 print(validate_price(valid_order,"price"))
 print(validate_price(negative_order,"price"))
 print(validate_price(bad_order,"price"))
+"""
