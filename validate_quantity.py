@@ -6,5 +6,5 @@ def validate_quantity(value, column_name):
             return False 
         else:
             return True
-    except ValueError:
+    except (ValueError,TypeError):
         return False

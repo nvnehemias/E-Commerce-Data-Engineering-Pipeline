@@ -5,5 +5,5 @@ def validate_price(value, column_name):
             return False 
         else:
             return True
-    except ValueError:
+    except (ValueError,TypeError):
         return False
