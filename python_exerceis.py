@@ -3,9 +3,10 @@ def convert_order(dataset):
     for i in dataset:
 
         if i['customer_id'] is None:
-                    print(f'{i['order_id']} is missing a customer')
+            print(f"{i['order_id']} is missing a customer")
+            continue
         else:
-            print(f'{i['order_id']} has a customer')
+            print(f"{i['order_id']} has a customer")
 
         try:
             price = float(i["price"])
@@ -20,11 +21,11 @@ def convert_order(dataset):
 
         data_dictionary = {
 
-            "order_id": i["order_id"]
-            "customer_id": i["customer_id"]
-            "product": i["product"]
-            "price": price
-            "quantity": quantity
+            "order_id": i["order_id"],
+            "customer_id": i["customer_id"],
+            "product": i["product"],
+            "price": price,
+            "quantity": quantity,
             "order_total": price * quantity
 
         }
