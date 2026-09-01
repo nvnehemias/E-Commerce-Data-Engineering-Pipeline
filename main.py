@@ -42,7 +42,7 @@ def convert_order(dataset):
         quantity = int(i["quantity"])
 
 
-        new_columns = ["order_id","customer_id","product","quantity","order_total"]
+        new_columns = ["order_id","customer_id","product","price","quantity","order_total"]
         new_values = [order_id, i["customer_id"], i["product"], price, quantity, round(price*quantity,2)]
         clean_list.append(transform_order(new_columns,new_values))
         
