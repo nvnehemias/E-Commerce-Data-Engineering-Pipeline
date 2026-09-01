@@ -1,4 +1,3 @@
-# def transform_order(order, price, quantity, length_dictionary):
 def transform_order(list_columns, values):
 
     new_dictionary = {}
