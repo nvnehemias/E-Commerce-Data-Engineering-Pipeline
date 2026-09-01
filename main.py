@@ -5,8 +5,9 @@ from transform_order import transform_order
 
 def convert_order(dataset):
 
-    # Empty clean list
+    # Assigning Lists
     clean_list = []
+    new_columns = ["order_id","customer_id","product","price","quantity","order_total"]
 
     # Counters
     total_orders = 0
@@ -41,8 +42,7 @@ def convert_order(dataset):
             continue 
         quantity = int(i["quantity"])
 
-
-        new_columns = ["order_id","customer_id","product","price","quantity","order_total"]
+        
         new_values = [order_id, i["customer_id"], i["product"], price, quantity, round(price*quantity,2)]
         clean_list.append(transform_order(new_columns,new_values))
         
