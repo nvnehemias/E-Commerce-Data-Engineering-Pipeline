@@ -1,6 +1,7 @@
 from validate_price import validate_price
 from validate_quantity import validate_quantity
 from validate_customer import validate_customer
+from transform_order import transform_order
 
 def convert_order(dataset):
 
@@ -39,19 +40,12 @@ def convert_order(dataset):
             invalid_quantity += 1 
             continue 
         quantity = int(i["quantity"])
+
+
+        new_columns = ["order_id","customer_id","product","quantity","order_total"]
+        new_values = [order_id, i["customer_id"], i["product"], price, quantity, round(price*quantity,2)]
+        clean_list.append(transform_order(new_columns,new_values))
         
-        data_dictionary = {
-
-            "order_id": order_id,
-            "customer_id": i["customer_id"],
-            "product": i["product"],
-            "price": price,
-            "quantity": quantity,
-            "order_total": round(price * quantity,2)
-
-        }
-
-        clean_list.append(data_dictionary)
         successful_orders += 1 
     
 
