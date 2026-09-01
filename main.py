@@ -33,14 +33,12 @@ def convert_order(dataset):
         if not validate_price(i,"price"):
             invalid_price += 1 
             continue
-        elif validate_price(i,"price"):
-            price = float(i["price"])
+        price = float(i["price"])
 
         if not validate_quantity(i,"quantity"):
             invalid_quantity += 1 
             continue 
-        elif validate_quantity(i,"quantity"):
-            quantity = int(i["quantity"])
+        quantity = int(i["quantity"])
         
         data_dictionary = {
 
