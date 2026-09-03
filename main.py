@@ -70,4 +70,7 @@ json_path = os.path.join(current_directory,"orders.json")
 with open(json_path,"r",encoding = 'utf-8') as file:
     data = json.load(file)
 
-    print(convert_order(data))
+cleaned_orders, report = convert_order(data)
+
+with open("cleaned_orders.json","w") as file:
+    json.dump(cleaned_orders, file, indent = 4)
