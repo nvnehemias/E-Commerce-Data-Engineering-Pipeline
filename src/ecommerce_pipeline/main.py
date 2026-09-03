@@ -7,16 +7,13 @@ import os
 
 
 # Obtaining file path
-# base_dir = Path(__file__).parent
 base_dir = get_project_root()
 raw_data_path = base_dir / "data" / "raw"
 proc_data_path = base_dir / "data" / "processed" / "cleaned_"
 
 # Finding all files with .json 
 json_files = list(raw_data_path.glob("**/**/*.json"))
-print(base_dir)
-print(raw_data_path)
-print(json_files)
+
 # Looping through all files and loading data
 for file_path in json_files:
     print(f"Loading file: {file_path.name}")
