@@ -2,6 +2,7 @@ from validate_price import validate_price
 from validate_quantity import validate_quantity
 from validate_customer import validate_customer
 from transform_order import transform_order
+from pathlib import Path
 import json 
 import os 
 
@@ -64,11 +65,21 @@ def convert_order(dataset):
 
     return clean_list, quality_report
 
-current_directory = os.path.dirname(os.path.abspath(__file__))
-json_path = os.path.join(current_directory,"orders.json")
+# current_directory = os.path.dirname(os.path.abspath(__file__))
+# json_path = os.path.join(current_directory,"orders.json")
 
-with open(json_path,"r",encoding = 'utf-8') as file:
-    data = json.load(file)
+
+# Obtaining file path
+base_dir = Path(__file__).parent
+raw_data_path = base_dir / "data" / "raw"
+
+# Finding all files with .json 
+json_files = list(raw_data_path.glob("*.json"))
+
+for file_path in json_files:
+    print(f"Loading file: {file_path.name}")
+    with open(file_path,"r",encoding = 'utf-8') as file:
+        data = json.load(file)
 
 cleaned_orders, report = convert_order(data)
 
