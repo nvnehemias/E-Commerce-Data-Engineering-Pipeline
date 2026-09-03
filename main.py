@@ -65,9 +65,6 @@ def convert_order(dataset):
 
     return clean_list, quality_report
 
-# current_directory = os.path.dirname(os.path.abspath(__file__))
-# json_path = os.path.join(current_directory,"orders.json")
-
 
 # Obtaining file path
 base_dir = Path(__file__).parent
@@ -76,6 +73,7 @@ raw_data_path = base_dir / "data" / "raw"
 # Finding all files with .json 
 json_files = list(raw_data_path.glob("*.json"))
 
+# Looping through all files and loading data
 for file_path in json_files:
     print(f"Loading file: {file_path.name}")
     with open(file_path,"r",encoding = 'utf-8') as file:
