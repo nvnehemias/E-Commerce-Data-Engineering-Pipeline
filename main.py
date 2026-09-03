@@ -79,7 +79,8 @@ for file_path in json_files:
     with open(file_path,"r",encoding = 'utf-8') as file:
         data = json.load(file)
 
-cleaned_orders, report = convert_order(data)
+        cleaned_orders, report = convert_order(data)
 
-with open("data/processed/cleaned_orders.json","w", encoding = "utf-8") as file:
-    json.dump(cleaned_orders, file, indent = 4)
+        with open(f"data/processed/cleaned_{file_path.name}","w", encoding = "utf-8") as file:
+            json.dump(cleaned_orders, file, indent = 4)
+
