@@ -1,0 +1,51 @@
+[
+    {
+        "order_id": 1001,
+        "customer_id": 501,
+        "product": "Running Shoes",
+        "price": "89.99",
+        "quantity": "2"
+    },
+    {
+        "order_id": 1002,
+        "customer_id": 502,
+        "product": "Hoodie",
+        "price": "55.00",
+        "quantity": "1"
+    },
+    {
+        "order_id": 1003,
+        "customer_id": null,
+        "product": "Backpack",
+        "price": "45.50",
+        "quantity": "2"
+    },
+    {
+        "order_id": 1004,
+        "customer_id": 504,
+        "product": "T-Shirt",
+        "price": "-20.00",
+        "quantity": "1"
+    },
+    {
+        "order_id": 1005,
+        "customer_id": 505,
+        "product": "Jeans",
+        "price": "75.00",
+        "quantity": "0"
+    },
+    {
+        "order_id": 1006,
+        "customer_id": 506,
+        "product": "Jacket",
+        "price": "120.00",
+        "quantity": "3"
+    },
+    {
+        "order_id": 1006,
+        "customer_id": 507,
+        "product": "Hat",
+        "price": "25.00",
+        "quantity": "1"
+    }
+]
