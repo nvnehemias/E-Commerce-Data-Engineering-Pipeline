@@ -69,6 +69,7 @@ def convert_order(dataset):
 # Obtaining file path
 base_dir = Path(__file__).parent
 raw_data_path = base_dir / "data" / "raw"
+proc_data_path = base_dir / "data" / "processed" / "cleaned_"
 
 # Finding all files with .json 
 json_files = list(raw_data_path.glob("*.json"))
@@ -80,7 +81,8 @@ for file_path in json_files:
         data = json.load(file)
 
         cleaned_orders, report = convert_order(data)
-
-        with open(f"data/processed/cleaned_{file_path.name}","w", encoding = "utf-8") as file:
-            json.dump(cleaned_orders, file, indent = 4)
+        print(report)
+        
+    with open(f"{proc_data_path}{file_path.name}","w", encoding = "utf-8") as file:
+        json.dump(cleaned_orders, file, indent = 4)
 
