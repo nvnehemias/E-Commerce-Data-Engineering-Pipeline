@@ -72,5 +72,5 @@ with open(json_path,"r",encoding = 'utf-8') as file:
 
 cleaned_orders, report = convert_order(data)
 
-with open("cleaned_orders.json","w") as file:
+with open("data/processed/cleaned_orders.json","w", encoding = "utf-8") as file:
     json.dump(cleaned_orders, file, indent = 4)
