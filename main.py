@@ -3,6 +3,7 @@ from validate_quantity import validate_quantity
 from validate_customer import validate_customer
 from transform_order import transform_order
 from pathlib import Path
+import logging
 import json 
 import os 
 
