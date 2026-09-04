@@ -12,8 +12,15 @@ raw_data_path = base_dir / "data" / "raw"
 proc_data_path = base_dir / "data" / "processed" / "cleaned_"
 
 # Finding all files with .json 
-json_files = list(raw_data_path.glob("**/**/*.json"))
+json_files = list(raw_data_path.glob("**/*.json"))
 
+
+# Logging Basic Config
+# logging.basicConfig(
+#     level = logging.debug
+#     format = 
+# )
+logging.info("Start pipeline")
 # Looping through all files and loading data
 for file_path in json_files:
     print(f"Loading file: {file_path.name}")
@@ -21,6 +28,7 @@ for file_path in json_files:
         data = json.load(file)
 
         cleaned_orders, report = convert_order(data)
+
         print(report)
         
     with open(f"{proc_data_path}{file_path.name}","w", encoding = "utf-8") as file:
