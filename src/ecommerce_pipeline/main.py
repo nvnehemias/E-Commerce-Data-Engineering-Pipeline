@@ -44,6 +44,7 @@ for file_path in json_files:
 
     try: 
         with open(file_path,"r",encoding = 'utf-8') as file:
+            # Loading file
             data = json.load(file)    
     except FileNotFoundError:
         logging.error(f"File not found: {file_path.name}")
@@ -51,8 +52,8 @@ for file_path in json_files:
     except json.JSONDecodeError:
          logging.error(f"Corrupted or invalide JSON file: {file_path.name}")
          continue
-    except Exception as e:
-         logging.error(f"Failed to read file {file_path.name}: {e}")
+    except OSError as e:
+         logging.error(f"Failed to open/read file {file_path.name}: {e}")
          continue
 
     # Passing data to function
