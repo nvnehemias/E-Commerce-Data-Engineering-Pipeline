@@ -46,8 +46,9 @@ for file_path in json_files:
 
         cleaned_orders, report = convert_order(data)
 
-        # print(report)
+        
         
     with open(f"{proc_data_path}{file_path.name}","w", encoding = "utf-8") as file:
         json.dump(cleaned_orders, file, indent = 4)
 
+        logging.info(f"Finished processing: {proc_data_path}{file_path.name}")
