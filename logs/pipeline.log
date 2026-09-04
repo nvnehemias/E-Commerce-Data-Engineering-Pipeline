@@ -24,3 +24,9 @@ INFO:root:Start pipeline
 2026-09-03 23:53:20 - INFO - Start pipeline
 2026-09-03 23:53:20 - INFO - Loading file: orders.json
 2026-09-03 23:53:20 - INFO - Finished processing: orders.json
+2026-09-03 23:55:49 - INFO - Start pipeline
+2026-09-03 23:55:49 - INFO - Loading file: orders.json
+2026-09-03 23:55:49 - INFO - Finished processing: orders.json
+2026-09-03 23:57:57 - INFO - Start pipeline
+2026-09-03 23:57:57 - INFO - Loading file: orders.json
+2026-09-03 23:57:57 - INFO - Finished processing: orders.json
