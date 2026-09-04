@@ -110,3 +110,11 @@ INFO:root:Start pipeline
 2026-09-04 14:15:47 - WARNING - Total orders with invalid quantity 1
 2026-09-04 14:15:47 - INFO - Successfully processed 3 orders
 2026-09-04 14:15:47 - INFO - Finished processing: orders.json
+2026-09-04 14:18:26 - INFO - Start pipeline
+2026-09-04 14:18:26 - INFO - Loading file: orders.json
+2026-09-04 14:18:26 - INFO - Processing 7 orders
+2026-09-04 14:18:26 - WARNING - Total missing customers: 1
+2026-09-04 14:18:26 - WARNING - Total orders with invalid price 1
+2026-09-04 14:18:26 - WARNING - Total orders with invalid quantity 1
+2026-09-04 14:18:26 - INFO - Successfully processed 3 orders
+2026-09-04 14:18:26 - INFO - Finished processing: orders.json

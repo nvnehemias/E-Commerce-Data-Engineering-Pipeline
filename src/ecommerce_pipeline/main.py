@@ -42,7 +42,12 @@ for file_path in json_files:
     logging.info(f"Loading file: {file_path.name}")
 
     with open(file_path,"r",encoding = 'utf-8') as file:
-        data = json.load(file)
+
+        try: 
+            data = json.load(file)
+        except:
+             logging.error(f"Failed to load file: {file_path.name}")
+             continue
 
         # Passing data to function
         cleaned_orders, report = convert_order(data)
