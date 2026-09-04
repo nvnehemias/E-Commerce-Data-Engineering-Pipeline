@@ -1,12 +1,3 @@
-INFO:root:Start pipeline
-2026-31-09/03/26 23:31:05 INFO Start pipeline
-2026-38-09/03/26 23:38:33 - INFO - Start pipeline
-2026-40-09/03/26 23:40:29 - INFO - Start pipeline
-2026-40-09/03/26 23:40:29 - INFO - Loading file: orders.json
-2026-41-09/03/26 23:41:13 - INFO - Start pipeline
-2026-41-09/03/26 23:41:13 - INFO - Loading file: orders.json
-2026-41-09/03/26 23:41:49 - INFO - Start pipeline
-2026-41-09/03/26 23:41:49 - INFO - Loading file: orders.json
 2026-09-03 23:42:22 - INFO - Start pipeline
 2026-09-03 23:42:22 - INFO - Loading file: orders.json
 2026-09-03 23:46:32 - INFO - Start pipeline
