@@ -41,20 +41,26 @@ for file_path in json_files:
     # Printing and writing logging info
     logging.info(f"Loading file: {file_path.name}")
 
-    with open(file_path,"r",encoding = 'utf-8') as file:
 
-        try: 
-            data = json.load(file)
-        except:
-             logging.error(f"Failed to load file: {file_path.name}")
-             continue
+    try: 
+        with open(file_path,"r",encoding = 'utf-8') as file:
+            data = json.load(file)    
+    except FileNotFoundError:
+        logging.error(f"File not found: {file_path.name}")
+        continue 
+    except json.JSONDecodeError:
+         logging.error(f"Corrupted or invalide JSON file: {file_path.name}")
+         continue
+    except Exception as e:
+         logging.error(f"Failed to read file {file_path.name}: {e}")
+         continue
 
-        # Passing data to function
-        cleaned_orders, report = convert_order(data)
+    # Passing data to function
+    cleaned_orders, report = convert_order(data)
 
-        # Logging total orders processed
-        p_o_value = report.get("total_orders",0)
-        logging.info(f"Processing {p_o_value} orders")
+    # Logging total orders processed
+    p_o_value = report.get("total_orders",0)
+    logging.info(f"Processing {p_o_value} orders")
 
         
         

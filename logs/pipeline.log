@@ -118,3 +118,12 @@
 2026-09-04 14:41:20 - WARNING - Total duplicate orders found: 1
 2026-09-04 14:41:20 - INFO - Successfully processed 3 orders
 2026-09-04 14:41:20 - INFO - Finished processing: orders.json
+2026-09-04 14:50:18 - INFO - Starting pipeline
+2026-09-04 14:50:18 - INFO - Loading file: orders.json
+2026-09-04 14:50:18 - INFO - Processing 7 orders
+2026-09-04 14:50:18 - WARNING - Total missing customers: 1
+2026-09-04 14:50:18 - WARNING - Total orders with invalid price 1
+2026-09-04 14:50:18 - WARNING - Total orders with invalid quantity: 1
+2026-09-04 14:50:18 - WARNING - Total duplicate orders found: 1
+2026-09-04 14:50:18 - INFO - Successfully processed 3 orders
+2026-09-04 14:50:18 - INFO - Finished processing: orders.json
