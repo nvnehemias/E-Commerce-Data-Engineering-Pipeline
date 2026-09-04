@@ -18,3 +18,9 @@ INFO:root:Start pipeline
 2026-09-03 23:50:46 - INFO - Start pipeline
 2026-09-03 23:50:46 - INFO - Loading file: orders.json
 2026-09-03 23:50:46 - INFO - Finished processing: /Users/nehemias/Documents/data_projects/E-Commerce-Data-Engineering-Pipeline/data/processed/cleaned_orders.json
+2026-09-03 23:52:06 - INFO - Start pipeline
+2026-09-03 23:52:06 - INFO - Loading file: orders.json
+2026-09-03 23:52:06 - INFO - Finished processing: /Users/nehemias/Documents/data_projects/E-Commerce-Data-Engineering-Pipeline/data/processed/cleaned_orders.json
+2026-09-03 23:53:20 - INFO - Start pipeline
+2026-09-03 23:53:20 - INFO - Loading file: orders.json
+2026-09-03 23:53:20 - INFO - Finished processing: orders.json
