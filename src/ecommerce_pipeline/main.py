@@ -65,6 +65,10 @@ for file_path in json_files:
         i_p_value = report.get("invalid_price",0)
         logging.warning(f"Total orders with invalid price {i_p_value}")
 
+    if report.get("invalid_quantity",0) > 0:
+            i_q_value = report.get("invalid_quantity",0)
+            logging.warning(f"Total orders with invalid quantity {i_q_value}")
+
     if report.get("successful_orders",0) > 0: 
         s_o_value = report.get("successful_orders",0)
         logging.info(f"Successfully processed {s_o_value} orders")

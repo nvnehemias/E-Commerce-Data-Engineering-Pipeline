@@ -95,3 +95,18 @@ INFO:root:Start pipeline
 2026-09-04 00:16:12 - WARNING - Total orders with invalid price 1
 2026-09-04 00:16:12 - INFO - Successfully processed 3 orders
 2026-09-04 00:16:12 - INFO - Finished processing: orders.json
+2026-09-04 14:14:51 - INFO - Start pipeline
+2026-09-04 14:14:51 - INFO - Loading file: orders.json
+2026-09-04 14:14:51 - INFO - Processing 7 orders
+2026-09-04 14:14:51 - WARNING - Total missing customers: 1
+2026-09-04 14:14:51 - WARNING - Total orders with invalid price 1
+2026-09-04 14:14:51 - INFO - Successfully processed 3 orders
+2026-09-04 14:14:51 - INFO - Finished processing: orders.json
+2026-09-04 14:15:47 - INFO - Start pipeline
+2026-09-04 14:15:47 - INFO - Loading file: orders.json
+2026-09-04 14:15:47 - INFO - Processing 7 orders
+2026-09-04 14:15:47 - WARNING - Total missing customers: 1
+2026-09-04 14:15:47 - WARNING - Total orders with invalid price 1
+2026-09-04 14:15:47 - WARNING - Total orders with invalid quantity 1
+2026-09-04 14:15:47 - INFO - Successfully processed 3 orders
+2026-09-04 14:15:47 - INFO - Finished processing: orders.json
