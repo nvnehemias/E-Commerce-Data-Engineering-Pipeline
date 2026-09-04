@@ -1,29 +1,38 @@
+import logging
 from convert_order import convert_order
 from get_path import get_project_root
 from pathlib import Path
-import logging
 import json 
 import os 
 
 
 # Obtaining file path
 base_dir = get_project_root()
+log_data_path = base_dir / "logs" / "pipeline.log"
 raw_data_path = base_dir / "data" / "raw"
 proc_data_path = base_dir / "data" / "processed" / "cleaned_"
+
 
 # Finding all files with .json 
 json_files = list(raw_data_path.glob("**/*.json"))
 
 
 # Logging Basic Config
-# logging.basicConfig(
-#     level = logging.debug
-#     format = 
-# )
+logging.basicConfig(
+    filename = log_data_path,
+    filemode = "a",
+    level = logging.INFO,
+    format = "%(asctime)s - %(levelname)s - %(message)s",
+    datefmt = "%Y-%m-%d %H:%M:%S"
+)
+
 logging.info("Start pipeline")
+
+
 # Looping through all files and loading data
 for file_path in json_files:
     print(f"Loading file: {file_path.name}")
+    logging.info(f"Loading file: {file_path.name}")
     with open(file_path,"r",encoding = 'utf-8') as file:
         data = json.load(file)
 
