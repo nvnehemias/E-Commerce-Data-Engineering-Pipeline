@@ -44,15 +44,33 @@ for file_path in json_files:
     with open(file_path,"r",encoding = 'utf-8') as file:
         data = json.load(file)
 
+        # Passing data to function
         cleaned_orders, report = convert_order(data)
 
         print(report)
+
+        # Logging total orders processed
+        p_o_value = report.get("total_orders",0)
+        logging.info(f"Processing {p_o_value} orders")
+
+        
         
         
     with open(f"{proc_data_path}{file_path.name}","w", encoding = "utf-8") as file:
         json.dump(cleaned_orders, file, indent = 4)
 
+    if report.get("missing_customers",0) > 0:
+        m_o_value = report.get("missing_customers",0)
+        logging.warning(f"Total missing customers: {m_o_value}")
+
+    if report.get("invalid_price",0) > 0:
+        i_p_value = report.get("invalid_price",0)
+        logging.warning(f"Total orders with invalid price {i_p_value}")
+
     if report.get("successful_orders",0) > 0: 
-        print("We have sucessful_orders")
-        print(report.get("successful_orders",0))
-        logging.info(f"Finished processing: {file_path.name}")
+        s_o_value = report.get("successful_orders",0)
+        logging.info(f"Successfully processed {s_o_value} orders")
+
+        
+
+    logging.info(f"Finished processing: {file_path.name}")

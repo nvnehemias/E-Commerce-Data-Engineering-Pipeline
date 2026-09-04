@@ -30,3 +30,68 @@ INFO:root:Start pipeline
 2026-09-03 23:57:57 - INFO - Start pipeline
 2026-09-03 23:57:57 - INFO - Loading file: orders.json
 2026-09-03 23:57:57 - INFO - Finished processing: orders.json
+2026-09-04 00:01:00 - INFO - Start pipeline
+2026-09-04 00:01:00 - INFO - Loading file: orders.json
+2026-09-04 00:01:00 - INFO - Successfully process 3 orders
+2026-09-04 00:03:54 - INFO - Start pipeline
+2026-09-04 00:03:54 - INFO - Loading file: orders.json
+2026-09-04 00:03:54 - INFO - Processing 7 orders
+2026-09-04 00:03:54 - INFO - Successfully process 3 orders
+2026-09-04 00:07:58 - INFO - Start pipeline
+2026-09-04 00:07:58 - INFO - Loading file: orders.json
+2026-09-04 00:07:58 - INFO - Processing 7 orders
+2026-09-04 00:07:58 - WARNING - Total missing customers: 1
+2026-09-04 00:08:19 - INFO - Start pipeline
+2026-09-04 00:08:19 - INFO - Loading file: orders.json
+2026-09-04 00:08:19 - INFO - Processing 7 orders
+2026-09-04 00:08:19 - WARNING - Total missing customers: 1
+2026-09-04 00:08:26 - INFO - Start pipeline
+2026-09-04 00:08:26 - INFO - Loading file: orders.json
+2026-09-04 00:08:26 - INFO - Processing 7 orders
+2026-09-04 00:08:26 - WARNING - Total missing customers: 1
+2026-09-04 00:09:24 - INFO - Start pipeline
+2026-09-04 00:09:24 - INFO - Loading file: orders.json
+2026-09-04 00:09:24 - INFO - Processing 7 orders
+2026-09-04 00:09:24 - WARNING - Total missing customers: 1
+2026-09-04 00:10:31 - INFO - Start pipeline
+2026-09-04 00:10:31 - INFO - Loading file: orders.json
+2026-09-04 00:10:31 - INFO - Processing 7 orders
+2026-09-04 00:10:31 - WARNING - Total missing customers: 1
+2026-09-04 00:10:47 - INFO - Start pipeline
+2026-09-04 00:10:47 - INFO - Loading file: orders.json
+2026-09-04 00:10:47 - INFO - Processing 7 orders
+2026-09-04 00:10:47 - WARNING - Total missing customers: 1
+2026-09-04 00:11:54 - INFO - Start pipeline
+2026-09-04 00:11:54 - INFO - Loading file: orders.json
+2026-09-04 00:11:54 - INFO - Processing 7 orders
+2026-09-04 00:11:54 - WARNING - Total missing customers: 1
+2026-09-04 00:12:25 - INFO - Start pipeline
+2026-09-04 00:12:25 - INFO - Loading file: orders.json
+2026-09-04 00:12:25 - INFO - Processing 7 orders
+2026-09-04 00:12:25 - WARNING - Total missing customers: 1
+2026-09-04 00:15:19 - INFO - Start pipeline
+2026-09-04 00:15:19 - INFO - Loading file: orders.json
+2026-09-04 00:15:19 - INFO - Processing 7 orders
+2026-09-04 00:15:19 - WARNING - Total missing customers: 1
+2026-09-04 00:15:19 - WARNING - Total orders with invalid price 1
+2026-09-04 00:15:40 - INFO - Start pipeline
+2026-09-04 00:15:40 - INFO - Loading file: orders.json
+2026-09-04 00:15:40 - INFO - Processing 7 orders
+2026-09-04 00:15:40 - WARNING - Total missing customers: 1
+2026-09-04 00:15:40 - WARNING - Total orders with invalid price 1
+2026-09-04 00:15:40 - INFO - Successfully process 3 orders
+2026-09-04 00:15:40 - INFO - Finished processing: orders.json
+2026-09-04 00:15:49 - INFO - Start pipeline
+2026-09-04 00:15:49 - INFO - Loading file: orders.json
+2026-09-04 00:15:49 - INFO - Processing 7 orders
+2026-09-04 00:15:49 - WARNING - Total missing customers: 1
+2026-09-04 00:15:49 - WARNING - Total orders with invalid price 1
+2026-09-04 00:15:49 - INFO - Successfully process 3 orders
+2026-09-04 00:15:49 - INFO - Finished processing: orders.json
+2026-09-04 00:16:12 - INFO - Start pipeline
+2026-09-04 00:16:12 - INFO - Loading file: orders.json
+2026-09-04 00:16:12 - INFO - Processing 7 orders
+2026-09-04 00:16:12 - WARNING - Total missing customers: 1
+2026-09-04 00:16:12 - WARNING - Total orders with invalid price 1
+2026-09-04 00:16:12 - INFO - Successfully processed 3 orders
+2026-09-04 00:16:12 - INFO - Finished processing: orders.json
