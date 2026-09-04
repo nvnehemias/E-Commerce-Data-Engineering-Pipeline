@@ -19,26 +19,34 @@ json_files = list(raw_data_path.glob("**/*.json"))
 
 # Logging Basic Config
 logging.basicConfig(
-    filename = log_data_path,
-    filemode = "a",
+    # filename = log_data_path,
+    # filemode = "a",
     level = logging.INFO,
     format = "%(asctime)s - %(levelname)s - %(message)s",
-    datefmt = "%Y-%m-%d %H:%M:%S"
+    datefmt = "%Y-%m-%d %H:%M:%S",
+    handlers = [
+        logging.FileHandler(log_data_path, encoding = "utf-8"),
+        logging.StreamHandler()
+    ],
+    force = True
 )
 
+# First logging
 logging.info("Start pipeline")
 
 
 # Looping through all files and loading data
 for file_path in json_files:
-    print(f"Loading file: {file_path.name}")
+
+    # Printing and writing logging info
     logging.info(f"Loading file: {file_path.name}")
+
     with open(file_path,"r",encoding = 'utf-8') as file:
         data = json.load(file)
 
         cleaned_orders, report = convert_order(data)
 
-        print(report)
+        # print(report)
         
     with open(f"{proc_data_path}{file_path.name}","w", encoding = "utf-8") as file:
         json.dump(cleaned_orders, file, indent = 4)
