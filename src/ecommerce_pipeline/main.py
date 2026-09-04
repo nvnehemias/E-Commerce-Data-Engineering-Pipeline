@@ -32,7 +32,7 @@ logging.basicConfig(
 )
 
 # First logging
-logging.info("Start pipeline")
+logging.info("Starting pipeline")
 
 
 # Looping through all files and loading data
@@ -72,7 +72,11 @@ for file_path in json_files:
 
     if report.get("invalid_quantity",0) > 0:
             i_q_value = report.get("invalid_quantity",0)
-            logging.warning(f"Total orders with invalid quantity {i_q_value}")
+            logging.warning(f"Total orders with invalid quantity: {i_q_value}")
+
+    if report.get("duplicate_orders",0) > 0:
+                i_q_value = report.get("duplicate_orders",0)
+                logging.warning(f"Total duplicate orders found: {i_q_value}")
 
     if report.get("successful_orders",0) > 0: 
         s_o_value = report.get("successful_orders",0)
