@@ -47,8 +47,6 @@ for file_path in json_files:
         # Passing data to function
         cleaned_orders, report = convert_order(data)
 
-        print(report)
-
         # Logging total orders processed
         p_o_value = report.get("total_orders",0)
         logging.info(f"Processing {p_o_value} orders")
