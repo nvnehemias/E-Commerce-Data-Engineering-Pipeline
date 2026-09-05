@@ -20,6 +20,7 @@ def test_customer_exists():
     result = validate_customer(validate_customer_data,"customer_id")
 
     assert result == True, f"Expected True for valid customer: {result}"
+    
 
 def test_customer_missing():
 
@@ -33,6 +34,7 @@ def test_customer_missing():
     
     assert result_2 == False, f"Expected False for invalid customer: {result_2}"
 
+
 def test_customer_is_integer():
 
     validate_customer_data = {
@@ -43,4 +45,4 @@ def test_customer_is_integer():
         
     result_3 = validate_customer(validate_customer_data,"customer_id")
         
-    assert result_3 == False, f"Expected False for invalid customer: {result_3}"
+    assert result_3 == False, f"Expected False for string customer: {result_3}"
