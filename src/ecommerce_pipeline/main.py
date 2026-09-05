@@ -50,7 +50,7 @@ for file_path in json_files:
         logging.error(f"File not found: {file_path.name}")
         continue 
     except json.JSONDecodeError:
-         logging.error(f"Corrupted or invalide JSON file: {file_path.name}")
+         logging.error(f"Corrupted or invalid JSON file: {file_path.name}")
          continue
     except OSError as e:
          logging.error(f"Failed to open/read file {file_path.name}: {e}")
@@ -61,7 +61,7 @@ for file_path in json_files:
 
     # Logging total orders processed
     p_o_value = report.get("total_orders",0)
-    logging.info(f"Processing {p_o_value} orders")
+    logging.info(f"Processed {p_o_value} orders")
 
         
         
@@ -82,8 +82,8 @@ for file_path in json_files:
             logging.warning(f"Total orders with invalid quantity: {i_q_value}")
 
     if report.get("duplicate_orders",0) > 0:
-                i_q_value = report.get("duplicate_orders",0)
-                logging.warning(f"Total duplicate orders found: {i_q_value}")
+                d_o_value = report.get("duplicate_orders",0)
+                logging.warning(f"Total duplicate orders found: {d_o_value}")
 
     if report.get("successful_orders",0) > 0: 
         s_o_value = report.get("successful_orders",0)
