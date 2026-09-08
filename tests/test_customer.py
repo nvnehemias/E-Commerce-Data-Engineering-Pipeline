@@ -46,3 +46,15 @@ def test_customer_is_integer():
     result_3 = validate_customer(validate_customer_data,"customer_id")
         
     assert result_3 == False, f"Expected False for string customer: {result_3}"
+
+
+def test_customer_missing_key():
+
+    validate_customer_data = {
+        "name": "Alice Smith",
+        "email": "alice@example.com"
+    }
+        
+    result_3 = validate_customer(validate_customer_data,"customer_id")
+        
+    assert result_3 == False, f"Expected False for string customer: {result_3}"
