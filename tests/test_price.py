@@ -45,7 +45,7 @@ def test_price_less_than_zero():
     assert result_3 == False, f"Expected False for invalide price: {result_3}"
 
 
-def test_price_integer():
+def test_price_invalid_string():
 
     validate_price_data = {
         "customer_id": 101,
