@@ -31,3 +31,16 @@ def test_quantity_negative():
     result_2 = validate_quantity(validate_quantity_data,"quantity")
 
     assert result_2 == False, f"Expected False for valid price: {result_2}"
+
+
+def test_quantity_positive():
+
+    validate_quantity_data = {
+            "customer_id": 101,
+            "quantity": 10,
+            "email": "alice@example.com"
+        }
+    
+    result_3 = validate_quantity(validate_quantity_data,"quantity")
+
+    assert result_3 == True, f"Expected True for valid price: {result_3}"
