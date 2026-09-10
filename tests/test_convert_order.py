@@ -34,7 +34,7 @@ def test_conver_order_output():
     assert final_report["invalid_price"] == 1
     assert final_report["invalid_quantity"] == 0
     assert final_report["duplicate_orders"] == 0
-    print(final_list)
+    
     assert final_list == [{
                 "order_id": 1001,
                 "customer_id": 501,
