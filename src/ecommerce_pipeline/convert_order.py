@@ -1,7 +1,14 @@
-from validate_price import validate_price
-from validate_quantity import validate_quantity
-from validate_customer import validate_customer
-from transform_order import transform_order
+import sys 
+from pathlib import Path
+
+# Adding proejct root to obtain correct path
+project_root = Path(__file__).resolve().parent.parent
+sys.path.insert(0,str(project_root/"src"))
+
+from ecommerce_pipeline.validate_price import validate_price
+from ecommerce_pipeline.validate_quantity import validate_quantity
+from ecommerce_pipeline.validate_customer import validate_customer
+from ecommerce_pipeline.transform_order import transform_order
 
 def convert_order(dataset):
 
