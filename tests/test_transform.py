@@ -1,6 +1,7 @@
 # importing libraries 
 import sys 
 from pathlib import Path
+import pytest
 
 # Adding proejct root to obtain correct path
 project_root = Path(__file__).resolve().parent.parent
@@ -21,3 +22,11 @@ def test_transform_order():
     }
 
     assert result == expected_results, f"Expected True for valid price: {result}"
+
+def test_transform_missing_value():
+
+    new_columns = ["column_1","column_2"]
+    new_values = ["1"]
+
+    if len(new_columns) != len(new_values):
+        raise ValueError("Columns and values count mismatch")
