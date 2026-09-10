@@ -28,17 +28,18 @@ def test_conver_order_output():
     ]
     final_list, final_report = convert_order(dataset)
 
-    assert final_report["total_orders"] == "2"
-    assert final_report["successful_orders"] == "1"
-    assert final_report["missing_customers"] == "0"
-    assert final_report["invalid_price"] == "1"
-    assert final_report["invalid_quantity"] == "0"
-    assert final_report["duplicate_orders"] == "0"
-
+    assert final_report["total_orders"] == 2
+    assert final_report["successful_orders"] == 1
+    assert final_report["missing_customers"] == 0
+    assert final_report["invalid_price"] == 1
+    assert final_report["invalid_quantity"] == 0
+    assert final_report["duplicate_orders"] == 0
+    print(final_list)
     assert final_list == [{
                 "order_id": 1001,
                 "customer_id": 501,
                 "product": "Running Shoes",
-                "price": "89.99",
-                "quantity": "2"
+                "price": 89.99,
+                "quantity": 2,
+                "order_total": (89.99*2)
             }]
