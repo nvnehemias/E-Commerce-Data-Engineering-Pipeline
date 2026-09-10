@@ -8,7 +8,7 @@ sys.path.insert(0,str(project_root/"src"))
 
 from ecommerce_pipeline.convert_order import convert_order
 
-def test_conver_order_output():
+def test_convert_order_output():
 
     dataset = [
         {
