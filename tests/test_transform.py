@@ -8,11 +8,16 @@ sys.path.insert(0,str(project_root/"src"))
 
 from ecommerce_pipeline.transform_order import transform_order
 
-def test_transform_does_not_exists():
+def test_transform_order():
 
     new_columns = ["column_1","column_2"]
-    new_values = ["1"]
+    new_values = ["1","2"]
 
     result = transform_order(new_columns,new_values)
 
-    assert result == False, f"Expected False for valid price: {result}"
+    expected_results = {
+        "column_1": "1",
+        "column_2": "2"
+    }
+
+    assert result == expected_results, f"Expected True for valid price: {result}"
