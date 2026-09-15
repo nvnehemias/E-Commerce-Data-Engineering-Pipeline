@@ -13,6 +13,7 @@ try:
         port = os.getenv("DB_PORT","5432")
     )
 
+    connection.close()
     print("Successfully connected to the database!")
 
 except psycopg.Error as e:
