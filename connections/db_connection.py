@@ -16,4 +16,4 @@ try:
     print("Successfully connected to the database!")
 
 except psycopg.Error as e:
-    print(f"Error connecting to PostgreSQL{e}")
+    print(f"Error connecting to PostgreSQL: {e}")
