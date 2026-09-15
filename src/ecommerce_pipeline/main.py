@@ -19,8 +19,6 @@ json_files = list(raw_data_path.glob("**/*.json"))
 
 # Logging Basic Config
 logging.basicConfig(
-    # filename = log_data_path,
-    # filemode = "a",
     level = logging.INFO,
     format = "%(asctime)s - %(levelname)s - %(message)s",
     datefmt = "%Y-%m-%d %H:%M:%S",
