@@ -28,7 +28,7 @@ logging.basicConfig(
 def get_connection():
 
     load_dotenv()
-
+    connection = None
     try:
         logging.info("Starting database connection")
         connection = psycopg.connect(
