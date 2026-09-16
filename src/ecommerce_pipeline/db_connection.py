@@ -4,11 +4,7 @@ import psycopg
 from pathlib import Path
 import logging
 from dotenv import load_dotenv
-
-# Importing get_project_root function
-project_root = Path(__file__).resolve().parent.parent
-sys.path.insert(0,str(project_root/"src"))
-from ecommerce_pipeline.get_path import get_project_root
+from get_path import get_project_root
 
 # getting path
 base_dir = get_project_root()

@@ -38,3 +38,6 @@ for f in json_files:
             logging.info(f"Successfully loaded {f.name}.")
     except FileNotFoundError:
             logging.error(f"File not found: {f.name}")
+
+
+    return data 
