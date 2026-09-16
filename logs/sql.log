@@ -4,3 +4,15 @@
 2026-09-16 15:24:36 - INFO - Successfully connected to the database!
 2026-09-16 15:24:49 - INFO - Starting database connection
 2026-09-16 15:24:49 - INFO - Successfully connected to the database!
+2026-09-16 15:28:53 - INFO - Starting database connection
+2026-09-16 15:28:53 - INFO - Successfully connected to the database!
+2026-09-16 15:29:14 - INFO - Starting database connection
+2026-09-16 15:29:15 - INFO - Successfully connected to the database!
+2026-09-16 15:29:29 - INFO - Starting database connection
+2026-09-16 15:30:00 - INFO - Starting database connection
+2026-09-16 15:30:00 - INFO - This is our db connection: <psycopg.Connection [IDLE] (host=127.0.0.1 user=postgres database=ecommerce_pipeline) at 0x7fbeea70cb80>
+2026-09-16 15:30:00 - INFO - Successfully connected to the database!
+2026-09-16 15:30:34 - INFO - Starting database connection
+2026-09-16 15:30:34 - INFO - Successfully connected to the database!
+2026-09-16 15:30:34 - INFO - This is our db connection: <psycopg.Connection [IDLE] (host=127.0.0.1 user=postgres database=ecommerce_pipeline) at 0x7fdaa070cb80>
+2026-09-16 15:30:34 - INFO - Closing db connection.
