@@ -1,8 +1,10 @@
 import logging
-from get_path import get_project_root
+import json  
 from pathlib import Path
-import json 
-import os 
+from get_path import get_project_root
+from db_connection import get_connection
+
+
 
 # Obtaining file path
 base_dir = get_project_root()
@@ -39,5 +41,5 @@ for f in json_files:
     except FileNotFoundError:
             logging.error(f"File not found: {f.name}")
 
-
-    return data 
+     
+    
