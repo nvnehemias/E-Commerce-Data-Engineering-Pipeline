@@ -1,0 +1,27 @@
+2026-09-16 16:04:56 - INFO - Starting process to load orders.
+2026-09-16 16:05:51 - INFO - Starting process to load orders.
+2026-09-16 16:05:58 - INFO - Starting process to load orders.
+2026-09-16 16:05:58 - INFO - Loading file: []
+2026-09-16 16:06:23 - INFO - Starting process to load orders.
+2026-09-16 16:06:23 - INFO - Loading file: []
+2026-09-16 16:06:55 - INFO - Starting process to load orders.
+2026-09-16 16:06:55 - INFO - Loading file: []
+2026-09-16 16:07:19 - INFO - Starting process to load orders.
+2026-09-16 16:07:19 - INFO - Loading file: []
+2026-09-16 16:08:36 - INFO - Starting process to load orders.
+2026-09-16 16:08:36 - INFO - Loading file: [PosixPath('/Users/nehemias/Documents/data_projects/E-Commerce-Data-Engineering-Pipeline/data/processed/cleaned_orders.json')]
+2026-09-16 16:08:50 - INFO - Starting process to load orders.
+2026-09-16 16:09:10 - INFO - Starting process to load orders.
+2026-09-16 16:09:15 - INFO - Starting process to load orders.
+2026-09-16 16:09:15 - INFO - Loading file: [PosixPath('/Users/nehemias/Documents/data_projects/E-Commerce-Data-Engineering-Pipeline/data/processed/cleaned_orders.json')]
+2026-09-16 16:10:30 - INFO - Starting process to load orders.
+2026-09-16 16:11:02 - INFO - Starting process to load orders.
+2026-09-16 16:11:02 - INFO - Loading file: cleaned_orders.json
+2026-09-16 16:11:59 - INFO - Starting process to load orders.
+2026-09-16 16:11:59 - INFO - Loading file: cleaned_orders.json
+2026-09-16 16:12:36 - INFO - Starting process to load orders.
+2026-09-16 16:12:36 - INFO - Loading file: cleaned_orders.json
+2026-09-16 16:12:36 - INFO - Successfully loaded /Users/nehemias/Documents/data_projects/E-Commerce-Data-Engineering-Pipeline/data/processed/cleaned_orders.json.
+2026-09-16 16:12:43 - INFO - Starting process to load orders.
+2026-09-16 16:12:43 - INFO - Loading file: cleaned_orders.json
+2026-09-16 16:12:43 - INFO - Successfully loaded cleaned_orders.json.
