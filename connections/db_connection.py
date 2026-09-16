@@ -41,6 +41,6 @@ def get_connection():
         logging.info("Successfully connected to the database!")
         
     except psycopg.Error as e:
-        logging.error("Error connecting to PostgreSQL: {e}")
+        logging.error(f"Error connecting to PostgreSQL: {e}")
 
     return connection
