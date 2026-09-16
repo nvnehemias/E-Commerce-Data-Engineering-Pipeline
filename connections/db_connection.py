@@ -39,13 +39,8 @@ def get_connection():
             port = os.getenv("DB_PORT","5432")
         )
         logging.info("Successfully connected to the database!")
-        logging.info(f"This is our db connection: {connection}")
-        # connection.close()
-        # logging.info("Closing db connection.")
         
     except psycopg.Error as e:
         logging.error("Error connecting to PostgreSQL: {e}")
 
     return connection
-
-get_connection()
