@@ -35,3 +35,18 @@
 2026-09-16 16:57:08 - INFO - Successfully connected to the database!
 2026-09-16 16:57:08 - INFO - Loading file: cleaned_orders.json
 2026-09-16 16:57:08 - INFO - Successfully loaded cleaned_orders.json.
+2026-09-16 17:06:34 - INFO - Starting process to load orders.
+2026-09-16 17:06:34 - INFO - Starting database connection
+2026-09-16 17:06:35 - INFO - Successfully connected to the database!
+2026-09-16 17:06:35 - INFO - Loading file: cleaned_orders.json
+2026-09-16 17:06:35 - INFO - Successfully loaded cleaned_orders.json.
+2026-09-16 17:12:09 - INFO - Starting process to load orders.
+2026-09-16 17:12:09 - INFO - Starting database connection
+2026-09-16 17:12:09 - INFO - Successfully connected to the database!
+2026-09-16 17:12:09 - INFO - Loading file: cleaned_orders.json
+2026-09-16 17:12:09 - INFO - Successfully loaded cleaned_orders.json.
+2026-09-16 17:41:36 - INFO - Starting process to load orders.
+2026-09-16 17:41:36 - INFO - Starting database connection
+2026-09-16 17:41:36 - INFO - Successfully connected to the database!
+2026-09-16 17:41:36 - INFO - Loading file: cleaned_orders.json
+2026-09-16 17:41:36 - INFO - Successfully loaded cleaned_orders.json.
