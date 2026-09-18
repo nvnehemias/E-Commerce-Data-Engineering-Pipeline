@@ -1,4 +1,4 @@
-from db_connection import get_connection
+from ecommerce_pipeline.db_connection import get_connection
 
 conn = get_connection()
 
