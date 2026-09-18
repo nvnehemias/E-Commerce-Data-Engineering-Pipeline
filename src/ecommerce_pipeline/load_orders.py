@@ -56,11 +56,11 @@ for f in json_files:
                       i["order_total"]
                       )
                  cursor.execute(sql_statement,values)
-                 conn.commit() 
+                 
     except FileNotFoundError:
             logging.error(f"File not found: {f.name}")
 
      
-
+conn.commit() 
 cursor.close()
 conn.close()
