@@ -35,6 +35,15 @@ logging.info("Starting process to load orders.")
 conn = get_connection()
 cursor = conn.cursor()
 
+# Open SQL files
+with open(sql_path, "r", encoding="utf-8") as sql_file:
+    sql_script = sql_file.read()
+    print(sql_script)
+with open(sql_stg_path, "r", encoding="utf-8") as sql_stg_file:
+    sql_stg_script = sql_stg_file.read()
+    print(sql_stg_script)
+
+
 # Loop through list of files
 for f in json_files:
     logging.info(f"Loading file: {f.name}")
