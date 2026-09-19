@@ -1,0 +1,23 @@
+2026-09-18 18:01:23 - INFO - Starting process to load staging orders.
+2026-09-18 18:01:23 - INFO - Starting database connection
+2026-09-18 18:01:23 - INFO - Successfully connected to the database!
+2026-09-18 18:04:26 - INFO - Starting process to load staging orders.
+2026-09-18 18:04:26 - INFO - Starting database connection
+2026-09-18 18:04:26 - INFO - Successfully connected to the database!
+2026-09-18 18:04:26 - INFO - Loading file: orders.json
+2026-09-18 18:04:26 - INFO - Successfully loaded orders.json.
+2026-09-18 18:04:56 - INFO - Starting process to load staging orders.
+2026-09-18 18:04:56 - INFO - Starting database connection
+2026-09-18 18:04:56 - INFO - Successfully connected to the database!
+2026-09-18 18:04:56 - INFO - Loading file: orders.json
+2026-09-18 18:04:56 - INFO - Successfully loaded orders.json.
+2026-09-18 18:06:22 - INFO - Starting process to load staging orders.
+2026-09-18 18:06:22 - INFO - Starting database connection
+2026-09-18 18:06:22 - INFO - Successfully connected to the database!
+2026-09-18 18:06:22 - INFO - Loading file: orders.json
+2026-09-18 18:06:22 - INFO - Successfully loaded orders.json.
+2026-09-18 18:09:58 - INFO - Starting process to load staging orders.
+2026-09-18 18:09:58 - INFO - Starting database connection
+2026-09-18 18:09:58 - INFO - Successfully connected to the database!
+2026-09-18 18:09:58 - INFO - Loading file: orders.json
+2026-09-18 18:09:58 - INFO - Successfully loaded orders.json.

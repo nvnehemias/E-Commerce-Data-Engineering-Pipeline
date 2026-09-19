@@ -1,4 +1,4 @@
-insert into orders (
+insert into stg_orders (
 
     order_id
     , customer_id
