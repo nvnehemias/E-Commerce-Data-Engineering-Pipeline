@@ -10,6 +10,8 @@ from db_connection import get_connection
 base_dir = get_project_root()
 log_data_path = base_dir / "logs" / "load_order.log"
 proc_data_path = base_dir / "data" / "processed"
+sql_path = base_dir / "sql" / "load_orders.sql"
+sql_stg_path = base_dir / "sql" / "load_stg_orders.sql"
 
 # Finding all files with .json 
 json_files = list(proc_data_path.glob("cleaned_*.json"))
