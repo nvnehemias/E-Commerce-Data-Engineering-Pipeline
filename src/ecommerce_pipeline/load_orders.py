@@ -11,7 +11,6 @@ base_dir = get_project_root()
 log_data_path = base_dir / "logs" / "load_order.log"
 proc_data_path = base_dir / "data" / "processed"
 sql_path = base_dir / "sql" / "load_orders.sql"
-sql_stg_path = base_dir / "sql" / "load_stg_orders.sql"
 
 # Finding all files with .json 
 json_files = list(proc_data_path.glob("cleaned_*.json"))
@@ -38,10 +37,6 @@ cursor = conn.cursor()
 # Open SQL files
 with open(sql_path, "r", encoding="utf-8") as sql_file:
     sql_script = sql_file.read()
-    print(sql_script)
-with open(sql_stg_path, "r", encoding="utf-8") as sql_stg_file:
-    sql_stg_script = sql_stg_file.read()
-    print(sql_stg_script)
 
 
 # Loop through list of files
@@ -53,11 +48,8 @@ for f in json_files:
             # Loading file
             data = json.load(file)    
             logging.info(f"Successfully loaded {f.name}.")
-            sql_statement = """
-                            insert into orders (order_id, customer_id, product, price, quantity, order_total)
-                            values (%s,%s,%s,%s,%s,%s)
-                            on conflict (order_id) do nothing;
-                            """
+
+            # Looping through values
             for i in data:
                  values = (
                       i["order_id"],
@@ -67,7 +59,7 @@ for f in json_files:
                       i["quantity"],
                       i["order_total"]
                       )
-                 cursor.execute(sql_statement,values)
+                 cursor.execute(sql_script,values)
                  
     except FileNotFoundError:
             logging.error(f"File not found: {f.name}")
