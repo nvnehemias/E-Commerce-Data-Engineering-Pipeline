@@ -1,6 +1,5 @@
 import logging
 import json  
-from pathlib import Path
 from get_path import get_project_root
 from db_connection import get_connection
 
