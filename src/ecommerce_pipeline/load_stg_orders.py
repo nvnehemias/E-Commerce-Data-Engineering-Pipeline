@@ -50,17 +50,17 @@ for f in raw_json_files:
             
             # Looping through values
             for i in data:
-                 values = (
+                values = (
                       i["order_id"],
                       i["customer_id"],
                       i["product"],
                       i["price"],
                       i["quantity"]
-                      )
-                 cursor.execute(sql_stg_script,values)
+                    )
+                cursor.execute(sql_stg_script,values)
                  
     except FileNotFoundError:
-            logging.error(f"File not found: {f.name}")
+        logging.error(f"File not found: {f.name}")
 
      
 conn.commit() 
