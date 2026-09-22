@@ -1,23 +1,26 @@
-INSERT INTO orders (
-    order_id,
-    customer_id,
-    product,
-    price,
-    quantity,
-    order_total
+insert into orders (
+    order_id
+    , customer_id
+    , product
+    , price
+    , quantity
+    , order_total
 )
-SELECT 
-    order_id,
-    customer_id,
-    product,
-    CAST(price AS numeric) AS price,
-    CAST(quantity AS int) AS quantity,
-    ROUND(
-        CAST(price AS numeric) * CAST(quantity AS int),
+
+select
+    order_id
+    , customer_id
+    , product
+    , cast(price as numeric) as price
+    , cast(quantity as int) as quantity
+    , ROUND(
+        cast(price as numeric) * cast(quantity as int),
         2
-    ) AS order_total
-FROM stg_orders
-WHERE customer_id IS NOT NULL
-  AND price >= 0
-  AND quantity >= 1
-ON CONFLICT (order_id) DO NOTHING;
+    ) as order_total
+from stg_orders
+where 1=1
+    and customer_id is not null 
+    and price >= 0
+    and quantity >= 1
+on conflict (order_id) do nothing
+;
