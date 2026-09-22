@@ -20,7 +20,7 @@ select
 from stg_orders
 where 1=1
     and customer_id is not null 
-    and price >= 0
-    and quantity >= 1
+    and cast(price as numeric) >= 0
+    and cast(quantity as int) >= 1
 on conflict (order_id) do nothing
 ;

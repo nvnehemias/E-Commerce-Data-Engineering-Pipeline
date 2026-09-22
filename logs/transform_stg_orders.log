@@ -1,1 +1,20 @@
 2026-09-22 15:53:36 - INFO - Starting process to transform staging orders.
+2026-09-22 15:57:20 - INFO - Starting process to transform staging orders.
+2026-09-22 15:58:04 - INFO - Starting process to transform staging orders.
+2026-09-22 15:58:04 - INFO - Starting database connection
+2026-09-22 15:58:04 - INFO - Successfully connected to the database!
+2026-09-22 15:58:04 - INFO - Connecting to database.
+2026-09-22 15:59:50 - INFO - Starting process to transform staging orders.
+2026-09-22 15:59:50 - INFO - Starting database connection
+2026-09-22 15:59:51 - INFO - Successfully connected to the database!
+2026-09-22 15:59:51 - INFO - Connecting to database.
+2026-09-22 16:00:32 - INFO - Starting process to transform staging orders.
+2026-09-22 16:00:32 - INFO - Starting database connection
+2026-09-22 16:00:32 - INFO - Successfully connected to the database!
+2026-09-22 16:00:32 - INFO - Connecting to database.
+2026-09-22 16:01:02 - INFO - Starting process to transform staging orders.
+2026-09-22 16:01:02 - INFO - Starting database connection
+2026-09-22 16:01:02 - INFO - Successfully connected to the database!
+2026-09-22 16:01:02 - INFO - Connecting to database.
+2026-09-22 16:01:02 - INFO - Executing sql command.
+2026-09-22 16:01:02 - INFO - Closing connection to database.
